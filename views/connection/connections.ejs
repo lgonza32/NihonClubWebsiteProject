@@ -1,0 +1,28 @@
+<%- include('../partials/header.ejs')%>
+    <main class="connections">
+        <div class="connection-container">
+            <h1>Study</h1>
+            <ul class="connection-category">
+                <%if(connections.length) {%>
+                    <%connections.forEach(connection => {%>
+                        <li><a href="/connections/<%= connection.id%>"><%= connection.name%></a></li>
+                    <%});
+                } else {%>
+                    <p>There are no connections to display</p>
+                <%}%>
+            </ul>
+        </div>
+        <div class="connection-container">
+            <h1>Events</h1>
+            <ul class="connection-category">
+                <%if(connections.length) {%>
+                    <%connections.forEach(connection => {%>
+                        <li><a href="/connections/<%= connection.id%>"><%= connection.name%></a></li>
+                    <%});
+                } else {%>
+                    <p>There are no connections to display</p>
+                <%}%>
+            </ul>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs')%>

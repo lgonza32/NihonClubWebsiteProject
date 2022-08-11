@@ -1,0 +1,23 @@
+show dbs
+
+use connections;
+
+db.connections.insertOne({topic: "Study", name: "Hiragana", hostname: "Nihon Club", details: "Study Hiragana with others", location: "CHHS 135", date: ISODate("2021-11-11T00:00:00Z"), starttime: "12:00", endtime: "13:00", imageurl: "https://www.japanistry.com/wp-content/uploads/2016/10/hiragana-base.jpg"})
+
+db.connections.insertOne({topic: "Study", name: "Katakana", hostname: "Nihon Club", details: "Study Katakana with others", location: "CHHS 135", date: ISODate("2021-11-13T00:00:00Z"), starttime: "12:00", endtime: "13:00", imageurl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Table_katakana.svg/768px-Table_katakana.svg.png"})
+
+db.connections.insertOne({topic: "Study", name: "Kanji", hostname: "Nihon Club", details: "Study Kanji with others", location: "CHHS", date: ISODate("2021-11-15T00:00:00Z"), starttime: "12:00", endtime: "13:00", imageurl: "https://image.shutterstock.com/image-vector/japanese-kanji-260nw-28378822.jpg"})
+
+db.connections.insertOne({topic: "Event", name: "International Festival", hostname: "Nihon Club", details: "Volunteer for the Japanese booth for the International Festival", location: "Outside SAC", date: ISODate("2021-09-28T00:00:00Z"), starttime: "12:00", endtime: "17:00", imageurl: "https://live.staticflickr.com/5759/29542784783_6007b063d3_z.jpg"})
+
+db.connections.insertOne({topic: "Event", name: "Tea Ceremony", hostname: "Nihon Club", details: "Come learn about the Japanese tradition of tea ceremonies!", location: "Fretwell 112", date: ISODate("2021-11-20T00:00:00Z"), starttime: "17:30", endtime: "19:30", imageurl: "https://media.tacdn.com/media/attractions-splice-spp-674x446/0a/90/0e/93.jpg"})
+
+db.connections.insertOne({topic: "Event", name: "Game Night", hostname: "Nihon Club", details: "Come play various games with other people!", location: "Student Union 340CF", date: ISODate("2021-11-22T00:00:00Z"), starttime: "17:30", endtime: "19:30", imageurl: "https://blog.fromjapan.co.jp/en/wp-content/uploads/2017/06/board_game-2.jpg"})
+
+db.connections.find()
+
+db.connections.deleteMany({})
+
+db.connections.find()
+
+show dbs

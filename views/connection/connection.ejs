@@ -1,0 +1,30 @@
+<%- include('../partials/header.ejs')%>
+    <main id="connection">
+        <div class="connection">
+            <h1 class="connection-title"><%= connection.name%></h1>  
+            <small>Posted <%= connection.createdAt.toLocaleString()%> by <%= connection.author.firstName + ' ' + connection.author.lastName%></small>    
+            <%if(user == connection.author._id) {%>
+            <form>
+                <button type="submit" id="delete" formmethod="POST" formaction="/connections/<%= connection.id%>?_method=DELETE">Delete</button>
+                <button type="submit" id="update" formmethod="GET" formaction="/connections/<%= connection.id%>/edit">Update</button>
+            </form>
+            <%}%>
+            
+            <div class="connection-img">
+                <img src="<%= connection.imageurl%>">
+            </div>
+
+            <div class="connection-info">
+                <p id="host"><%= connection.hostname%></p>
+                <p id="date"><%= connection.date%></p>
+                <p id="time"><%= connection.starttime%> - <%= connection.endtime%></p>
+                <p id="location"><%= connection.location%></p>
+            </div>
+
+            <div class="connection-details">
+                <h2>Details</h2>
+                <p><%= connection.details%></p>
+            </div>
+        </div>
+    </main>
+    <%- include('../partials/footer.ejs')%>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>New Connections</title>
+	<!-- Meta tag for description -->
+	<meta name="description" content="New Connections">
+	<!-- Meta tag for author -->
+	<meta name="author" content="Nihon Club">
+	<!-- Meta tag for character encoding -->
+	<meta charset="utf-8">
+	<!-- External Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="base.css">
+</head>
+
+<body>
+    <div class="header">
+        <header>
+            <a href="index.html">
+                <img src="./images/Nihon_club_headshot.png" alt="Nihon Club Logo">
+            </a>    
+            <div class="user-nav">
+                <a href="newConnections.html">Start A New Connection</a>
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+            <nav class="header-nav">
+                <ul>
+					<li><a href="index.html">Home</a></li>
+                    <li><a href="connections.html">Connections</a></li>
+				</ul>
+            </nav>	
+        </header>
+    </div>
+    
+
+    <main class="new-connections">
+        <form action="connections.html" method="POST">
+            <div class="row">
+                <div class="col-25">
+                    <label for="topic">Topic: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="topic" id="topic" placeholder="topic" required> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="title">Title: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="title" id="title" placeholder="title" required> 
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-25">
+                    <label for="host">Host: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="host" id="host" placeholder="host" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="details">Details: </label>
+                </div>
+                <div class="col-75">
+                    <textarea rows="3" cols="30" name="details" id="details" required>description</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="location">Where: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="location" id="location" placeholder="location" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="date">Date: </label>
+                </div>
+                <div class="col-75">
+                    <input type="date" name="date" id="date" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="start">Start: </label>
+                </div>
+                <div class="col-75">
+                    <input type="time" name="start" id="start" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="end">End: </label>
+                </div>
+                <div class="col-75">
+                    <input type="time" name="end" id="end" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="image">Image URL: </label>
+                </div>
+                <div class="col-75">
+                    <input type="file" name="image" id="image" accept="image/*" required/>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Create Connection">
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <!-- Footer navigation -->
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="connections.html">Connections</a></li>
+            </ul>
+        </nav>
+        <!-- Copyright -->
+        <p id="copyright">&copy; Nihon Club</p>
+    </footer>
+</body>
+</html>

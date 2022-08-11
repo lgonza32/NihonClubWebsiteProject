@@ -1,0 +1,82 @@
+<%- include('../partials/header.ejs')%>
+<main class = "update-connections">
+    <form method="POST" action="/connections/<%= connection.id%>?_method=PUT">
+        <div class="row">
+            <div class="col-25">
+                <label for="topic">Topic: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="topic" id="topic" placeholder="<%= connection.topic%>" value="<%= connection.topic%>"> 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="name">Title: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="name" id="name" placeholder="<%= connection.name%>" value="<%= connection.name%>"> 
+            </div>
+        </div> 
+        <div class="row">
+            <div class="col-25">
+                <label for="hostname">Host: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="hostname" id="hostname" placeholder="<%= connection.hostname%>" value="<%= connection.hostname%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="details">Details: </label>
+            </div>
+            <div class="col-75">
+                <textarea rows="3" cols="30" name="details" id="details" required minlength="10"><%= connection.details%></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="location">Where: </label>
+            </div>
+            <div class="col-75">
+                <input type="text" name="location" id="location" placeholder="<%= connection.location%>" value="<%= connection.location%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="date">Date: </label>
+            </div>
+            <div class="col-75">
+                <input type="date" name="date" id="date" value="<%= connection.date%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="starttime">Start: </label>
+            </div>
+            <div class="col-75">
+                <input type="time" name="starttime" id="starttime" value="<%= connection.starttime%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="endtime">End: </label>
+            </div>
+            <div class="col-75">
+                <input type="time" name="endtime" id="endtime" value="<%= connection.endtime%>">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="imageurl">Image URL: </label>
+            </div>
+            <div class="col-75">
+                <input type="url" name="imageurl" id="imageurl" value="<%= connection.imageurl%>"/>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Edit Connection">
+        </div>       
+    </form>
+
+</main>
+<%- include('../partials/footer.ejs')%>

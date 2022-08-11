@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>Nihon Club Home</title>
+	<!-- Meta tag for description -->
+	<meta name="description" content="Home">
+	<!-- Meta tag for author -->
+	<meta name="author" content="Nihon Club">
+	<!-- Meta tag for character encoding -->
+	<meta charset="utf-8">
+	<!-- External Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+</head>
+<body>
+    <div class="header">
+        <header>
+            <a href="/">
+                <img src="/images/Nihon_club_headshot.png" alt="Nihon Club Logo">
+            </a>    
+            <div class="user-nav">
+                <a href='/connections/newConnections'>Start A New Connection</a>
+                <%if(!user) {%>
+                    <a href="/users/login">Login</a>
+                    <a href="/users/new">Sign Up</a>
+                <%} else {%>
+                    <a href='/users/profile'>Profile</a>
+                    <a href='/users/logout'>Logout</a>
+                <%}%>
+            </div>
+            <nav class="header-nav">
+                <ul>
+					<li><a class="active" href='/'>Home</a></li>
+                    <li><a href='/connections'>Connections</a></li>  
+				</ul>
+            </nav>	
+        </header>
+    </div>
+
+    <% if(errorMessages.length > 0) {%>
+        <% errorMessages.forEach(message=>{%>
+            <div class='error'>
+                <%=message%>
+            </div>
+            <%});%>
+                <%}%>
+    
+                    <% if(successMessages.length > 0) {%>
+    
+                        <% successMessages.forEach(message=>{%>
+                            <div class='success'>
+                                <%=message%>
+                            </div>
+                            <%});%>
+                                <%}%>

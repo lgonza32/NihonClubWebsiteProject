@@ -1,0 +1,81 @@
+<%- include('../partials/header.ejs')%>
+    <main class="new-connections">
+        <form action="/connections" method="POST">
+            <div class="row">
+                <div class="col-25">
+                    <label for="topic">Topic: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="topic" id="topic" placeholder="topic" required> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="name">Title: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="name" id="name" placeholder="title" required> 
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-25">
+                    <label for="hostname">Host: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="hostname" id="hostname" placeholder="host name" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="details">Details: </label>
+                </div>
+                <div class="col-75">
+                    <textarea rows="3" cols="30" name="details" id="details" required minlength="10" required>description</textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="location">Where: </label>
+                </div>
+                <div class="col-75">
+                    <input type="text" name="location" id="location" placeholder="location" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="date">Date: </label>
+                </div>
+                <div class="col-75">
+                    <input type="date" name="date" id="date" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="starttime">Start: </label>
+                </div>
+                <div class="col-75">
+                    <input type="time" name="starttime" id="starttime" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="endtime">End: </label>
+                </div>
+                <div class="col-75">
+                    <input type="time" name="endtime" id="endtime" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-25">
+                    <label for="imageurl">Image URL: </label>
+                </div>
+                <div class="col-75">
+                    <input type="url" name="imageurl" id="imageurl" placeholder="https://example.com" required/>
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Create Connection">
+            </div>
+        </form>
+    </main>
+    <%- include('../partials/footer.ejs')%>
